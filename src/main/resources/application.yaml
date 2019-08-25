@@ -1,0 +1,23 @@
+spring:
+    kafka:
+        #Looks like you can set all the configurations here
+        properties:
+            bootstrap.servers: 127.0.0.1:9092
+            application.id: ApplicationFromGeneralProperties
+            sasl.mechanism: PLAIN
+            security.protocol: SASL_PLAINTEXT
+            sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="user" password="P8REYi8HYsee";
+        #To define specific configurations
+        streams:
+            properties:
+                bootstrap.servers: 127.0.0.1:9092
+                application.id: ApplicationFromProperties
+                sasl.mechanism: PLAIN
+                security.protocol: SASL_PLAINTEXT
+                sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="user" password="P8REYi8HYsee";
+        #To define specific configurations
+        admin:
+            properties:
+                sasl.mechanism: PLAIN
+                security.protocol: SASL_PLAINTEXT
+                sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="user" password="P8REYi8HYsee";
